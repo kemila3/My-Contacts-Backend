@@ -1,7 +1,10 @@
 const express = require("express");
 const errorHandler = require("./middelware/errorHandler");
+const { connect } = require("mongoose");
+const connectDB = require("./config/dbConnection");
 const dotenv = require("dotenv").config();
 
+connectDB();
 const app = express();
 
 //const port = process.env.PORT <= to run the port saved in dotenv file.
